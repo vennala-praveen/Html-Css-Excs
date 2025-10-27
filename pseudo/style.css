@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loading{
+    display: flex;
+    gap: 20px;
+    height: 100px;
+    margin: 100px;
+    
+}
+
+.loading .dot{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 -0.4rem rgba(60, 0, 80, 0.1) inset;
+    animation: cycle 1s ease-in-out infinite
+    
+}
+
+.loading .dot:nth-child(1){
+    animation-delay: 0;
+}
+
+.loading .dot:nth-child(2){
+    animation-delay: 0.2s;
+}
+
+.loading .dot:nth-child(3){
+    animation-delay: 0.4s;
+}
+
+.loading .dot:nth-child(4){
+    animation-delay: 0.6s;
+}
+
+.loading .dot:nth-child(5){
+    animation-delay: 0.8s;
+}
+
+.loading .dot:nth-child(6){
+    animation-delay: 10s;
+}
+
+@keyframes cycle {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(1rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+
+/* @keyframes cycle {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+} */
+
+.container{
+    width: 300px;
+    height: 100x;
+    margin: 30px;
+    background-color: #4b4a4a;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: 100px;
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
+    border: 1px solid #d2dae2;
+    border-radius: 10px;
+    
+}
+
+.container:hover{
+    background-image: linear-gradient(to right, red, green, blue, white, yellow);
+    animation: rain 2s linear infinite;
+}
+
+@keyframes rain {
+    to{
+        background-position: 20vw;
+    } 
+}
+
+.content{
+    width: 200px;
+    height: 100px;
+    color: #000;
+    background-color: crimson;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.5);
+    border-radius: 20%;
+    line-height: 100px;
+}
+
+.content:hover{
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, red);
+    animation: rainbow 2s linear infinite;
+}
+
+@keyframes rainbow {
+    to{
+        background-position: 20vw;
+    }
+    from{
+        background-position: 40vw;
+    }
+    
+}
