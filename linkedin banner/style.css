@@ -44,7 +44,7 @@ body {
 }
 
 /* Circular positions */
-.logo-html {
+.logo-html { 
   top: 50%;
   right: -20%;
   transform: translate(-50%, -50%);
